@@ -42,11 +42,22 @@ hexo.extend.deployer.register('ftpsync', (args, callback) => {
         sftp: false,
     };
 
+    if (args.verbose) {
+        console.log("Config:");
+        console.log(config);
+    }
+
     ftpDeploy
         .deploy(config)
         .then((res) => {
             console.log(res);
-            callback()
+            callback();
         })
-        .catch((err) => callback(err));
+        .catch((err) => {
+            if (args.verbose) {
+                console.error("Upload failed");
+                console.error(err);
+            }
+            callback(err);
+        });
 });

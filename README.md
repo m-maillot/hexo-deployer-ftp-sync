@@ -26,16 +26,18 @@ deploy:
   remote: [remote]
   port: [port]
   ignore: [ignore]
+  verbose: [verbose]
 ````
 
-| Option | Description                               | Default |
-|--------|-------------------------------------------|---------|
-| host   | Address of remote host                    |         |
-| user   | Username                                  |         |
-| pass   | Password                                  |         |
-| remote | Root directory of remote host             | /       |
-| port   | Port                                      | 21      |
-| ignore | Ignore the files on either host or remote | false   |
+| Option  | Description                               | Default |
+|---------|-------------------------------------------|---------|
+| host    | Address of remote host                    |         |
+| user    | Username                                  |         |
+| pass    | Password                                  |         |
+| remote  | Root directory of remote host             | /       |
+| port    | Port                                      | 21      |
+| ignore  | Ignore the files on either host or remote | false   |
+| verbose | Enable a verbose mode for debug           | false   |
 
 ## Warning
 
