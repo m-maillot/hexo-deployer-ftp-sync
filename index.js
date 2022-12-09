@@ -5,7 +5,9 @@ const ftpDeploy = new FtpDeploy();
 
 hexo.extend.deployer.register('ftpsync', (args, callback) => {
 
-    if (!args.host || !args.user || args.password == null) {
+    const { FTP_USER, FTP_PASSWORD } = process.env;
+
+    if (!args.host || (!args.user && !FTP_USER) || (args.password == null && FTP_PASSWORD == null)) {
         const help = [
             'You should configure deployment settings in _config.yml first!',
             '',
@@ -28,8 +30,8 @@ hexo.extend.deployer.register('ftpsync', (args, callback) => {
     }
 
     const config = {
-        user: args.user,
-        password: args.password,
+        user: args.user || FTP_USER,
+        password: args.password || FTP_PASSWORD,
         host: args.host,
         port: args.port || 21,
         localRoot: hexo.public_dir,

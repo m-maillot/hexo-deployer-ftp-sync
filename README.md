@@ -29,15 +29,15 @@ deploy:
   verbose: [verbose]
 ````
 
-| Option  | Description                               | Default |
-|---------|-------------------------------------------|---------|
-| host    | Address of remote host                    |         |
-| user    | Username                                  |         |
-| pass    | Password                                  |         |
-| remote  | Root directory of remote host             | /       |
-| port    | Port                                      | 21      |
-| ignore  | Ignore the files on either host or remote | false   |
-| verbose | Enable a verbose mode for debug           | false   |
+| Option  | Description                               | Default                           |
+|---------|-------------------------------------------|-----------------------------------|
+| host    | Address of remote host                    |                                   |
+| user    | Username                                  | Environment variable FTP_USER     |
+| pass    | Password                                  | Environment variable FTP_PASSWORD |
+| remote  | Root directory of remote host             | /                                 |
+| port    | Port                                      | 21                                |
+| ignore  | Ignore the files on either host or remote | false                             |
+| verbose | Enable a verbose mode for debug           | false                             |
 
 ## Warning
 
