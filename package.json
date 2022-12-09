@@ -1,0 +1,36 @@
+{
+  "name": "@m-maillot/hexo-deployer-ftp-sync",
+  "version": "1.0.0",
+  "description": "FTP deployer for Hexo",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "run": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-maillot/hexo-deployer-ftp-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m-maillot/hexo-deployer-ftp-sync/issues"
+  },
+  "keywords": [
+    "hexo",
+    "ftp",
+    "sync",
+    "deploy",
+    "deployer"
+  ],
+  "author": "Martial Maillot",
+  "license": "MIT",
+  "dependencies": {
+    "ftp-deploy": "^2.4.3"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/m-maillot/hexo-deployer-ftp-sync#readme",
+  "devDependencies": {}
+}
