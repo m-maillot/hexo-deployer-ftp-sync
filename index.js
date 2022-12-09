@@ -20,7 +20,7 @@ hexo.extend.deployer.register('ftpsync', (args, callback) => {
             '    ignore: false # Default is false',
             '    passive: true # Default is true',
             '',
-            'For more help, you can check the docs: ' + 'http://hexo.io/docs/deployment.html'.underline
+            'For more help, you can check the docs: ' + 'https://github.com/m-maillot/hexo-deployer-ftp-sync#usage'.underline
         ];
 
         console.log(help.join('\n'));
@@ -44,6 +44,9 @@ hexo.extend.deployer.register('ftpsync', (args, callback) => {
 
     ftpDeploy
         .deploy(config)
-        .then((res) => callback(res))
+        .then((res) => {
+            console.log(res);
+            callback()
+        })
         .catch((err) => callback(err));
 });
